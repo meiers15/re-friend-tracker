@@ -282,9 +282,7 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/location",
-                            "form": {
-                                "form": "LocationForm"
-                            }
+                            "page": "EditLocationPage",
                         },
 
                     ]
@@ -408,6 +406,44 @@ export class GuiModel {
                             "url": "/friend",
                             "form": {
                                 "form": "FriendForm"
+                            }
+
+
+                        },
+                    ]
+                },
+                {
+                    "id": "EditLocationPage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "button",
+                            "name": "EditLocation",
+                            "icon": "fa-calendar",
+                            "color": "orange",
+                            "form": {
+                                "form": "LocationForm"
+                            }
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "AddLocation",
+                            "icon": "fa-calendar",
+                            "color": "green",
+                            "form": {
+                                "form": "LocationForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-calendar",
+                            "color": "green",
+                            "search": true,
+                            "url": "/location/:locationKey/activity",
+                            "form": {
+                                "form": "ActivityForm"
                             }
 
 
