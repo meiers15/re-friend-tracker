@@ -91,6 +91,14 @@ export class GuiModel {
                             "required": true
                         },
                         {
+                            "id": "comment",
+                            "type": "text",
+                            "name": "Comments",
+                            "width": 2,
+                            "height": 4,
+                            "maxLength": 5000,
+                        },
+                        {
                             "type": "deleteButton",
                             "name": "Delete"
                         },
@@ -129,6 +137,14 @@ export class GuiModel {
                             "type": "date",
                             "name": "Date",
                             "width": 2
+                        },
+                        {
+                            "id": "comment",
+                            "type": "text",
+                            "name": "Comments",
+                            "width": 2,
+                            "height": 4,
+                            "maxLength": 5000,
                         },
                         {
                             "type": "deleteButton",
@@ -184,6 +200,20 @@ export class GuiModel {
                         "width": 2,
                         "required": true
                     },
+                    {
+                            "id": "date",
+                            "type": "date",
+                            "name": "CreationDate",
+                            "width": 2
+                        },
+                    {
+                            "id": "comment",
+                            "type": "text",
+                            "name": "Comments",
+                            "width": 2,
+                            "height": 4,
+                            "maxLength": 5000,
+                        },
                     {
                         "type": "deleteButton",
                         "name": "Delete"
@@ -365,7 +395,7 @@ export class GuiModel {
                             "icon": "fa-calendar",
                             "color": "orange",
                             "search": true,
-                            "url": "/activity",
+                            "url": "/friend/:friendKey/activity",
                             "form": {
                                 "form": "ActivityForm"
                             }
@@ -403,7 +433,7 @@ export class GuiModel {
                             "icon": "fa-user",
                             "color": "blue",
                             "search": true,
-                            "url": "/friend",
+                            "url": "/activity/:activityKey/friend",
                             "form": {
                                 "form": "FriendForm"
                             }
